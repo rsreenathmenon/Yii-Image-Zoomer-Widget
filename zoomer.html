@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<link rel="stylesheet" href="image_zoomer.css" type="text/css" />
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+
+<script type="text/javascript" src="image_zoomer.js">
+</script>
+
+<script type="text/javascript">
+
+jQuery(document).ready(function($){
+
+	/*$('#image1').addimagezoom({ // single image zoom
+		zoomrange: [3, 10],
+		magnifiersize: [300,300],
+		magnifierpos: 'right',
+		cursorshade: true,
+		largeimage: 'hayden.jpg' //<-- No comma after last option!
+	})*/
+
+
+	/*$('#image2').addimagezoom() // single image zoom with default options*/
+	
+	$('#multizoom1').addimagezoom({ // multi-zoom: options same as for previous Featured Image Zoomer's addimagezoom unless noted as '- new'
+		descArea: '#description', // description selector (optional - but required if descriptions are used) - new
+		speed: 1500, // duration of fade in for new zoomable images (in milliseconds, optional) - new
+		descpos: true, // if set to true - description position follows image position at a set distance, defaults to false (optional) - new
+		imagevertcenter: true, // zoomable image centers vertically in its container (optional) - new
+		magvertcenter: true, // magnified area centers vertically in relation to the zoomable image (optional) - new
+		zoomrange: [3, 10],
+		magnifiersize: [500,500],
+		magnifierpos: 'right',
+		cursorshadecolor: '#fdffd5',
+		cursorshade: true //<-- No comma after last option!
+	});
+	
+	
+	
+})
+
+</script>
+</head>
+
+<body>
+<!--<h3>Demo 1:</h3>
+
+<img id="image1" border="0" src="haydensmall.jpg" style="width:250px;height:338px">
+
+
+
+
+<h3>Demo 2:</h3>
+
+<img id="image2" border="0" src="listenmusic.jpg" style="width:200px;height:150px">-->
+
+
+
+
+<h3>Image Zoomer Demo</h3>
+
+<div class="targetarea" style="border:1px solid #eee"><img id="multizoom1" alt="zoomable" title="" src="images/millasmall.jpg"/></div>
+<div id="description">Milla Jojovitch</div>
+<div class="multizoom1 thumbs">
+<a href="images/millasmall.jpg" data-large="images/milla.jpg" data-title="Milla Jojovitch"><img src="images/milla_tmb.jpg" alt="Milla" title=""/></a> 
+<a href="images/saleensmall.jpg" data-lens="false" data-magsize="150,150" data-large="images/saleen.jpg" data-title="Saleen S7 Twin Turbo"><img src="images/saleen_tmb.jpg" alt="Saleen" title=""/></a> 
+<a href="images/haydensmall.jpg" data-large="images/hayden.jpg" data-title="Hayden Panettiere"><img src="images/hayden_tmb.jpg" alt="Hayden" title=""/></a> 
+<a href="images/jaguarsmall.jpg" data-large="images/jaguar.jpg" data-title="Jaguar Type E"><img src="images/jaguar_tmb.jpg" alt="Jaguar" title=""/></a>
+</div>
+
+
+
+
+<!--<h3>Demo 4:</h3>
+
+<div class="targetarea diffheight"><img id="multizoom2" alt="zoomable" title="" src="angelinasmall.jpg"/></div>
+<div id="description2">Angelina Jolie</div>
+<div class="multizoom2 thumbs">
+<a href="angelinasmall.jpg" data-large="angelina.jpg" data-title="Angelina Jolie"><img src="angelina_tmb.jpg" alt="Angelina" title=""/></a>
+<a href="saleensmall.jpg" data-large="saleen.jpg" data-title="Saleen S7 Twin Turbo"><img src="saleen_tmb.jpg" alt="Saleen" title=""/></a>
+<a href="jaguarsmall.jpg" data-large="jaguar.jpg" data-title="Jaguar Type E"><img src="jaguar_tmb.jpg" alt="Jaguar" title=""/></a>
+<a href="listenmusic.jpg" data-title="Relaxing Music" data-dims="300, 225"><img src="listen_tmb.jpg" alt="Relaxing Music" title=""/></a>
+</div>-->
+
+</body>
+</html>
