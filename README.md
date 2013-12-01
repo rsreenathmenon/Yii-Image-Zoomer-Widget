@@ -1,0 +1,2 @@
+Yii-Image-Zoomer-Widget
+=======================
