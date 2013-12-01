@@ -1,4 +1,13 @@
 <?php
+
+
+/**
+ * ImageZoomer Widget file.
+ * @author Sandip Das <sandip.sandip.das5@gmail.com>
+ * @copyright Copyright &copy; Sandip Das 2013
+ * @license MIT License
+*/
+
 class ImageZoomer extends CWidget
 {
 	public $_options = array();
