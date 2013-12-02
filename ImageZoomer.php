@@ -22,7 +22,7 @@ class ImageZoomer extends CWidget
 	public function run()
     {
 		//$images = dirname(__FILE__).'/assets/images';
-		echo '<div>ranjeet kumar sinmgh</div><div class="targetarea" style="border:1px solid #eee"><img id="multizoom1" alt="zoomable" title="" src="'.Yii::app()->getBaseUrl().'/uploads/images/millasmall.jpg"/></div>
+		echo '<div class="targetarea" style="border:1px solid #eee"><img id="multizoom1" alt="zoomable" title="" src="'.Yii::app()->getBaseUrl().'/uploads/images/millasmall.jpg"/></div>
 <div id="description">Milla Jojovitch</div>';
 		
 		Yii::app()->clientScript->registerScript("ImageZoomer","
