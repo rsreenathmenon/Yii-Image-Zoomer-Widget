@@ -10,7 +10,14 @@
 
 class ImageZoomer extends CWidget
 {
-	public $_options = array();
+	public $_options = array(
+		
+		'small_image_url'=>'',
+		'big_img_url'=>'',
+		'zoom_area'=>'500,500',
+		
+		
+	);
 	 public function init()
  
     {
@@ -21,9 +28,11 @@ class ImageZoomer extends CWidget
 	
 	public function run()
     {
+    	extract($_options);
+    	extract($options);
 		//$images = dirname(__FILE__).'/assets/images';
-		echo '<div class="targetarea" style="border:1px solid #eee"><img id="multizoom1" alt="zoomable" title="" src="'.Yii::app()->getBaseUrl().'/uploads/images/millasmall.jpg"/></div>
-<div id="description">Milla Jojovitch</div>';
+echo '<div class="targetarea" style="border:1px solid #eee"><img id="multizoom1" alt="zoomable" title="" src="'.$small_image_url.'"/></div>
+';
 		
 		Yii::app()->clientScript->registerScript("ImageZoomer","
 		$('#multizoom1').addimagezoom({ 
@@ -34,10 +43,10 @@ class ImageZoomer extends CWidget
 		imagevertcenter: true, /* zoomable image centers vertically in its container (optional) - new*/
 		magvertcenter: true, /* magnified area centers vertically in relation to the zoomable image (optional) - new*/
 		zoomrange: [3, 10],
-		magnifiersize: [500,500],
+		magnifiersize: [".$zoom_area."],
 		magnifierpos: 'right',
 		cursorshadecolor: '#fdffd5',
-		largeimage: '".Yii::app()->getBaseUrl()."/uploads/images/milla.jpg',
+		largeimage: '".$big_img_url."',
 		cursorshade: true /*<-- No comma after last option!*/
 	});
 	
